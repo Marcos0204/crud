@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = ( ) => {
     return (
-        <h1>Hokdjsfhksjdfhksd/h1>
+        <h1>hoome</h1>
     )   
 }
 
