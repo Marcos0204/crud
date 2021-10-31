@@ -3,7 +3,7 @@ import Home from './components/Home';
 import Logueo from './components/Logueo';
 
 const App= () => {
-  const [ userGlobal, setUserGlobal ] = useState(true);
+  const [ userGlobal, setUserGlobal ] = useState(false);
 
   return (
     <div className="App">
