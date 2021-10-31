@@ -1,10 +1,13 @@
+import React, { useEffect, useState } from 'react';
+import Home from './components/Home';
+import Logueo from './components/Logueo';
 
-import './App.css';
+const App= () => {
+  const [ userGlobal, setUserGlobal ] = useState(true);
 
-function App() {
   return (
     <div className="App">
-      <h1>salundando perras!</h1>
+      {userGlobal ? <Home/> : <Logueo />}
     </div>
   );
 }
