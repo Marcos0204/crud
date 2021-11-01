@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Stack, Container, Form, Button } from "react-bootstrap";
+import { app } from '../firebase';
+import { getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signInWithRedirect,
+        GoogleAuthProvider, } from 'firebase/auth';
 
+
+const Auth= getAuth(app); 
 
 const Logueo = ( ) => {
  
@@ -10,6 +18,14 @@ const Logueo = ( ) => {
         e.preventDefault();
         const email= e.target.formBasicEmail.value;
         const password = e.target.formBasicPassword.value;
+
+        if(iseRegister){
+          const user = await createUserWithEmailAndPassword(Auth, email, password)
+          console.log(user);
+        } else {
+          signInWithEmailAndPassword(Auth, email, password)
+        }
+
         
     }
 
