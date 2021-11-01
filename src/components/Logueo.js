@@ -23,7 +23,12 @@ const Logueo = ( ) => {
           const user = await createUserWithEmailAndPassword(Auth, email, password)
           console.log(user);
         } else {
-          signInWithEmailAndPassword(Auth, email, password)
+          try {
+              await signInWithEmailAndPassword(Auth, email, password)
+              console.log('si funciona')
+          } catch (error) {
+            console.log('no funciona')
+          }
         }
 
         

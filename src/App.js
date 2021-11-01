@@ -14,6 +14,7 @@ const App= () => {
   onAuthStateChanged(Auth, (userAuth) =>{
     if(userAuth){
       setUserGlobal(userAuth)
+      console.log(userAuth)
     } else {
       setUserGlobal(null);
     }
